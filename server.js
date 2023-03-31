@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const port = 8080
 const app = require('./app')
 const dotenv = require('dotenv');
 dotenv.config();
@@ -11,7 +10,7 @@ await mongoose.connect(API,{ useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected!'))
 
 
-app.listen(port , ()=>console.log(`local Server is Running on ${port}...`))
+app.listen(process.env.PORT , ()=>console.log(`local Server is Running on ${process.env.PORT}...`))
 }
 main()
 
