@@ -2,7 +2,6 @@ const mongoose = require('mongoose')
 const app = require('./app')
 const dotenv = require('dotenv');
 dotenv.config();
-mongoose.set('strictQuery',true);
 
 const API = process.env.DATABASE_URL || "mongodb://localhost/instaclone"
 async function main(){
